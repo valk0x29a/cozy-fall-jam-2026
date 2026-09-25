@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Cozy Fall Jam 2026"
+run/main_scene="uid://bei54o60crxr5"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +23,7 @@ window/stretch/aspect="expand"
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 
