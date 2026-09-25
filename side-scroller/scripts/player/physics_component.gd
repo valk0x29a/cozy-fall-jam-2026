@@ -8,7 +8,7 @@ extends Node
 @export_group("External Forces")
 @export var gravity_force: float = 300.0
 @export var gust_force: float = 500.0
-@export var waterfall_force: float = 500.0
+@export var waterfall_force: float = 100.0
 @export var blow_force: float = 500.0
 
 @export_group("Resistance and Friction")
