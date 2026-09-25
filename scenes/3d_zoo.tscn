@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://bcatr7y40hiwx"]
 
-[node name="3dZoo" type="Node3D" unique_id=2023709752]
+[node name="3DZoo" type="Node3D" unique_id=2023709752]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=972051374]
+size = Vector3(1.235, 0.22, 1.505)
