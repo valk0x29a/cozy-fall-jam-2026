@@ -224,7 +224,7 @@ albedo_texture = ExtResource("9_huww2")
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_i5mq0")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_o20pu"), SubResource("Terrain3DTextureAsset_6n3t8"), SubResource("Terrain3DTextureAsset_i0061"), SubResource("Terrain3DTextureAsset_lvp4d")])
 
-[node name="ValkScene" type="Node3D" unique_id=861711473]
+[node name="TerrainScene" type="Node3D" unique_id=861711473]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=959400473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.311607, -0.087491274, 1.5489941)
