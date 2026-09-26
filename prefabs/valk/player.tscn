@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b8u28e7d8efqj"]
+
+[ext_resource type="Script" uid="uid://c310fn48nq2jo" path="res://scripts/valk/player_controller.gd" id="1_ei4nk"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16d1p"]
+
+[node name="Player" type="CharacterBody3D" unique_id=2987538]
+script = ExtResource("1_ei4nk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1252663993]
+shape = SubResource("CapsuleShape3D_16d1p")
+
+[node name="Head" type="Camera3D" parent="." unique_id=683863541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62516207, 0)
