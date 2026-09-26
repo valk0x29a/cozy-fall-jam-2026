@@ -27,6 +27,10 @@ window/stretch/scale_mode="integer"
 
 enabled=PackedStringArray("res://addons/lowpolyterrain/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [gui]
 
 theme/custom_font="uid://cmc2fjiv572v1"
