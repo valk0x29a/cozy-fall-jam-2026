@@ -476,5 +476,4 @@ material = SubResource("Terrain3DMaterial_7u7p3")
 assets = SubResource("Terrain3DAssets_8lmo2")
 vertex_spacing = 10.0
 top_level = true
-visible = false
 metadata/_edit_lock_ = true
