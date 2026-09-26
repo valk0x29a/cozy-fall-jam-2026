@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://fqovubq70gbk"]
+
+[node name="Credits" type="Control" unique_id=1782107320]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1787842992]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 35.0
+offset_right = 833.0
+offset_bottom = 603.0
+
+[node name="Label" type="Label" parent="." unique_id=1313696567]
+layout_mode = 0
+offset_left = 419.0
+offset_top = 34.0
+offset_right = 834.0
+offset_bottom = 604.0
+theme_override_colors/font_color = Color(0.011764706, 0.019607844, 0, 1)
+text = "credits will be written here"
