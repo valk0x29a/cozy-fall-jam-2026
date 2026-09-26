@@ -2,7 +2,8 @@ class_name Player
 extends CharacterBody2D
 
 @export var camera: Camera2D
-@export var tile_map_layer: TileMapLayer
+@export var midground_layer: TileMapLayer
+@export var foreground_layer: TileMapLayer
 @export var player_size := Vector2(16, 16)
 
 @onready var input_component: InputComponent = $InputComponent
@@ -13,8 +14,8 @@ extends CharacterBody2D
 func _physics_process(delta: float) -> void:
 	var screen_position: Vector2 = get_viewport_transform() * global_position
 	
-	var physical_collision_data: PhysicalCollisionData = collision_component.get_physical_collision_data(self, tile_map_layer)
-	var logical_collision_data: LogicalCollisionData = collision_component.get_logical_collision_data(self, tile_map_layer)
+	var physical_collision_data: PhysicalCollisionData = collision_component.get_physical_collision_data(self, midground_layer)
+	var logical_collision_data: LogicalCollisionData = collision_component.get_logical_collision_data(self, foreground_layer)
 	
 	var on_floor: bool = is_on_floor()
 	var in_water: bool = logical_collision_data.is_water
@@ -30,16 +31,33 @@ func _physics_process(delta: float) -> void:
 	velocity = physics_component.calculate_velocity(velocity, on_floor, in_water, blow_direction, gust_direction, waterfall_direction, delta)
 
 	move_and_slide()
-	
-	if camera:
-		var half_width: float = player_size.x * 0.5
-		var half_height: float = player_size.y * 0.5
 
-		global_position.x = clamp(global_position.x, camera.limit_left + half_width, camera.limit_right - half_width)
-		global_position.y = clamp(global_position.y, camera.limit_top + half_height, camera.limit_bottom - half_height)
+	# if camera:
+	# 	var half_width: float = player_size.x * 0.5
+	# 	var half_height: float = player_size.y * 0.5
+	# 	global_position.x = clamp(global_position.x, camera.limit_left + half_width, camera.limit_right - half_width)
+	# 	global_position.y = clamp(global_position.y, camera.limit_top + half_height, camera.limit_bottom - half_height)
+
+	if camera and _is_out_of_bounds():
+		die()
 
 	if physical_collision_data.is_hazard:
-		print("Hazard!")
+		die()
 
 	if physical_collision_data.is_win:
-		print("Win!")
+		win()
+
+func die() -> void:
+	print("Player died!")
+
+func win() -> void:
+	print("Player won!")
+
+func _is_out_of_bounds() -> bool:
+	var half_width: float = player_size.x * 0.5
+	var half_height: float = player_size.y * 0.5
+	
+	return (global_position.x + half_width < camera.limit_left or
+			global_position.x - half_width > camera.limit_right or
+			global_position.y + half_height < camera.limit_top or
+			global_position.y - half_height > camera.limit_bottom)
