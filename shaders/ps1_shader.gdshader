@@ -3,7 +3,8 @@ render_mode blend_mix,
 	cull_disabled,
 	depth_prepass_alpha,
 	shadows_disabled,
-	specular_disabled;
+	specular_disabled,
+	vertex_lighting;
 
 uniform bool affine_mapping = false;
 uniform sampler2D albedo : source_color, filter_nearest;
