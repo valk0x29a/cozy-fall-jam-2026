@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bw2bdyv7npf2"]
+
+[ext_resource type="Shader" uid="uid://cd2ppkg2jyvs3" path="res://shaders/ps1_shader.gdshader" id="1_fv3t8"]
+[ext_resource type="Texture2D" uid="uid://c2arojd4f7drc" path="res://scenes/models/street lamptxt_lampa1.png" id="2_fv3t8"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fv3t8")
+shader_parameter/affine_mapping = false
+shader_parameter/albedo = ExtResource("2_fv3t8")
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(640, 480)

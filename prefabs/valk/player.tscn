@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://b8u28e7d8efqj"]
 
 [ext_resource type="Script" uid="uid://c310fn48nq2jo" path="res://scripts/valk/player_controller.gd" id="1_ei4nk"]
+[ext_resource type="Script" uid="uid://c2barltbujrdu" path="res://scripts/valk/gravity.gd" id="2_h0pp8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16d1p"]
+height = 1.5
 
 [node name="Player" type="CharacterBody3D" unique_id=2987538]
+collision_mask = 3
 script = ExtResource("1_ei4nk")
+move_speed = 2.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1252663993]
 shape = SubResource("CapsuleShape3D_16d1p")
 
 [node name="Head" type="Camera3D" parent="." unique_id=683863541]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62516207, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59404784, 0)
+
+[node name="Gravity" type="Node" parent="." unique_id=1440012933]
+script = ExtResource("2_h0pp8")

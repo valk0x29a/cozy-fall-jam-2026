@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bydhm1qobfbk8"]
+
+[ext_resource type="Texture2D" uid="uid://db6kve1pbcdmd" path="res://terrains/TRAWA.webp" id="1_iaqgm"]
+
+[resource]
+albedo_texture = ExtResource("1_iaqgm")
+metallic_specular = 0.0
+texture_filter = 0

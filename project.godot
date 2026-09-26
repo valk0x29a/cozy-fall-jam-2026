@@ -16,11 +16,13 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=240
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lowpolyterrain/plugin.cfg", "res://addons/terrain_3d/plugin.cfg")
 
 [input]
 
@@ -45,9 +47,14 @@ move_forward={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_2="Terrain"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+common/physics_interpolation=true
 
 [rendering]
 

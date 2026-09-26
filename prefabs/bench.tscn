@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cpfug48fifri3"]
+
+[ext_resource type="PackedScene" uid="uid://8t4yck40q08a" path="res://scenes/models/benchtxt.glb" id="1_n2juh"]
+[ext_resource type="Material" uid="uid://cua7jjyg8jn8k" path="res://scenes/models/bench.tres" id="2_5k8px"]
+[ext_resource type="Material" uid="uid://c5m25w4udnudc" path="res://scenes/models/bench2.tres" id="3_dbrao"]
+
+[node name="Bench" unique_id=1951929124 instance=ExtResource("1_n2juh")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Cube" parent="." index="2" unique_id=1961601712]
+material_override = ExtResource("2_5k8px")
+
+[node name="Cube_004" parent="." index="3" unique_id=1978612610]
+material_override = ExtResource("3_dbrao")

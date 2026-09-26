@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dgaub5bi8isvc"]
+
+[ext_resource type="PackedScene" uid="uid://dkpg06y5u0nuu" path="res://scenes/models/street lamptxt.glb" id="1_fe2k1"]
+[ext_resource type="Material" uid="uid://bw2bdyv7npf2" path="res://scenes/models/streetlamp.tres" id="2_c8la3"]
+
+[node name="Street Lamp" unique_id=1471313103 instance=ExtResource("1_fe2k1")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Cube" parent="." index="0" unique_id=1382278772]
+material_override = ExtResource("2_c8la3")
