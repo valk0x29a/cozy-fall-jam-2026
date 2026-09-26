@@ -23,11 +23,15 @@ var current_sound_time: float
 var movement_is_blocked := false
 var camera_is_blocked := false
 
+@export var load_save_on_ready: bool = true;
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if !head: print("NO CAMERA DETECTED!!!")
 	camera_base_offset = head.transform.origin
 	current_sound_time = footstep_repeat_time
+	if(load_save_on_ready):
+		GameManager.load_save();
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Vector3.ZERO

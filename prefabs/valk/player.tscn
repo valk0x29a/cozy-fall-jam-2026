@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c310fn48nq2jo" path="res://scripts/valk/player_controller.gd" id="1_ei4nk"]
 [ext_resource type="Script" uid="uid://c2barltbujrdu" path="res://scripts/valk/gravity.gd" id="2_h0pp8"]
+[ext_resource type="Script" uid="uid://c1yqgp5gmp3vo" path="res://scripts/valk/player_interactions.gd" id="2_jcd7h"]
+[ext_resource type="PackedScene" uid="uid://b6d6kbkukuj51" path="res://prefabs/valk/player_hud.tscn" id="4_de5et"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16d1p"]
 height = 1.5
@@ -17,5 +19,12 @@ shape = SubResource("CapsuleShape3D_16d1p")
 [node name="Head" type="Camera3D" parent="." unique_id=683863541]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59404784, 0)
 
+[node name="PlayerInteractions" type="Node3D" parent="Head" unique_id=595161196]
+script = ExtResource("2_jcd7h")
+interaction_mask = 1
+metadata/_custom_type_script = "uid://c1yqgp5gmp3vo"
+
 [node name="Gravity" type="Node" parent="." unique_id=1440012933]
 script = ExtResource("2_h0pp8")
+
+[node name="PlayerHud" parent="." unique_id=1617452526 instance=ExtResource("4_de5et")]
