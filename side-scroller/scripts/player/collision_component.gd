@@ -4,7 +4,6 @@ extends Node
 @export_group("Detection Settings")
 @export var collision_offset_pixels: float = 2.0
 
-
 func get_physical_collision_data(character_body: CharacterBody2D, tile_map_layer: TileMapLayer) -> PhysicalCollisionData:
 	var physical_collision_data: PhysicalCollisionData = PhysicalCollisionData.new()
 
@@ -27,7 +26,6 @@ func get_physical_collision_data(character_body: CharacterBody2D, tile_map_layer
 			physical_collision_data.is_win = physical_collision_data.is_win or bool(tile_data.get_custom_data("is_win"))
 
 	return physical_collision_data
-
 
 func get_logical_collision_data(character_body: CharacterBody2D, tile_map_layer: TileMapLayer) -> LogicalCollisionData:
 	var logical_collision_data: LogicalCollisionData = LogicalCollisionData.new()
@@ -53,7 +51,6 @@ func get_logical_collision_data(character_body: CharacterBody2D, tile_map_layer:
 			logical_collision_data.waterfall_direction += waterfall_direction_data
 
 	return logical_collision_data
-
 
 func _get_tiles_under_shape(target_tile_map: TileMapLayer, shape_node: CollisionShape2D) -> Array[TileData]:
 	var tiles_list: Array[TileData] = []
@@ -82,7 +79,6 @@ func _get_tiles_under_shape(target_tile_map: TileMapLayer, shape_node: Collision
 				tiles_list.append(tile_data)
 
 	return tiles_list
-
 
 func _find_collision_shape(parent_node: Node) -> CollisionShape2D:
 	for child_node in parent_node.get_children():
