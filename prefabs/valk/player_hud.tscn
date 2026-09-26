@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b6d6kbkukuj51"]
 
 [ext_resource type="Script" uid="uid://fdtuajmhv68i" path="res://scripts/valk/player_hud.gd" id="1_jus5n"]
+[ext_resource type="Texture2D" uid="uid://cyq0ijef52evo" path="res://assets/UI/crosshair.png" id="2_gbolp"]
 
 [node name="PlayerHud" type="Control" unique_id=1617452526]
 layout_mode = 3
@@ -17,3 +18,19 @@ layout_mode = 0
 offset_right = 69.0
 offset_bottom = 35.0
 text = "Time to Gather a Seed!!!"
+
+[node name="Label2" type="Label" parent="." unique_id=1559415168]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 2.0
+offset_right = 660.0
+offset_bottom = 37.0
+text = "Time to Gather a Seed!!!"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1495632951]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 320.0
+offset_right = 580.0
+offset_bottom = 328.0
+texture = ExtResource("2_gbolp")
