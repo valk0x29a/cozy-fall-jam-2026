@@ -120,7 +120,7 @@ directional_shadow_max_distance = 8192.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.09973, 0.8365977, -3.0235138)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=1878578396]
-data_directory = "res://terrains"
+data_directory = "res://terrain_main"
 material = SubResource("Terrain3DMaterial_tbgi4")
 assets = SubResource("Terrain3DAssets_ya4ey")
 top_level = true
