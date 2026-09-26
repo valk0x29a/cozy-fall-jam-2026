@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dswoeut10ipl7"]
+
+[ext_resource type="Shader" uid="uid://cd2ppkg2jyvs3" path="res://shaders/ps1_shader.gdshader" id="1_sjtqj"]
+[ext_resource type="Texture2D" uid="uid://c27d7uclifydm" path="res://assets/textures/trawa_32bit.jpg" id="2_s037d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dtglo"]
+render_priority = 0
+shader = ExtResource("1_sjtqj")
+shader_parameter/affine_mapping = false
+shader_parameter/albedo = ExtResource("2_s037d")
+shader_parameter/alpha_scissor = 0.7600000361
+shader_parameter/jitter = 0.3200000152
+shader_parameter/resolution = Vector2i(320, 240)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u0ya7"]
+
+[node name="RysiaScene" type="Node3D" unique_id=1603898183]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=14181553]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=971650165]
+transform = Transform3D(0.99920475, 0, -0.039873697, 0, 1, 0, 0.039873697, 0, 0.99920475, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_dtglo")
+mesh = SubResource("BoxMesh_u0ya7")
