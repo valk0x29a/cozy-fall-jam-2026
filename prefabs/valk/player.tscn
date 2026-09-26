@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b6d6kbkukuj51" path="res://prefabs/valk/player_hud.tscn" id="4_de5et"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_16d1p"]
+radius = 0.2
 height = 1.5
 
 [node name="Player" type="CharacterBody3D" unique_id=2987538]
