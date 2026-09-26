@@ -21,6 +21,8 @@ GameManager="*uid://crfy8fs83ieb2"
 
 [display]
 
+window/size/viewport_width=320
+window/size/viewport_height=240
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
@@ -32,6 +34,10 @@ enabled=PackedStringArray("res://addons/lowpolyterrain/plugin.cfg", "res://addon
 [global_group]
 
 seeds=""
+
+[filesystem]
+
+import/blender/enabled=false
 
 [gui]
 

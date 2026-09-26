@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cawkunjchxuh1"
-path.s3tc="res://.godot/imported/sciezka_32bit.jpg-67f5b4838e1879b64b1a378fc809a592.s3tc.ctex"
+uid="uid://kxl0elylbv8m"
+path.s3tc="res://.godot/imported/fencefloor_floorview_txt.png-bdf8dd6211168f89dde32473ed424e89.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "4ec03d87deb7872a91d77d1778f819cc"
+}
 
 [deps]
 
-source_file="res://assets/textures/sciezka_32bit.jpg"
-dest_files=["res://.godot/imported/sciezka_32bit.jpg-67f5b4838e1879b64b1a378fc809a592.s3tc.ctex"]
+source_file="res://scenes/models/fencefloor_floorview_txt.png"
+dest_files=["res://.godot/imported/fencefloor_floorview_txt.png-bdf8dd6211168f89dde32473ed424e89.s3tc.ctex"]
 
 [params]
 

@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cawkunjchxuh1"
-path.s3tc="res://.godot/imported/sciezka_32bit.jpg-67f5b4838e1879b64b1a378fc809a592.s3tc.ctex"
+uid="uid://di4lkii5jjpky"
+path.s3tc="res://.godot/imported/tree1_treelowpoly4.png-dc7052f95e1fd3e875f95a7a080823b2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "7bb8217d415b089e384b9bf0d56c6090"
+}
 
 [deps]
 
-source_file="res://assets/textures/sciezka_32bit.jpg"
-dest_files=["res://.godot/imported/sciezka_32bit.jpg-67f5b4838e1879b64b1a378fc809a592.s3tc.ctex"]
+source_file="res://scenes/models/tree1_treelowpoly4.png"
+dest_files=["res://.godot/imported/tree1_treelowpoly4.png-dc7052f95e1fd3e875f95a7a080823b2.s3tc.ctex"]
 
 [params]
 
