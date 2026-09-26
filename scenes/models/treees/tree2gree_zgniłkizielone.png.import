@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b84v2jqtrpr8r"
-path.s3tc="res://.godot/imported/klon_treelowpoly4.png-3049e49f5b5026a11e0598cb7d58c444.s3tc.ctex"
+uid="uid://1olkhjaocrya"
+path.s3tc="res://.godot/imported/tree2gree_zgniłkizielone.png-54c3aef29eec89a53bf4b2d9b2ca48d2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7bb8217d415b089e384b9bf0d56c6090"
+"md5": "eff7a21a2341efe6c732c75836b25fde"
 }
 
 [deps]
 
-source_file="res://scenes/models/klon_treelowpoly4.png"
-dest_files=["res://.godot/imported/klon_treelowpoly4.png-3049e49f5b5026a11e0598cb7d58c444.s3tc.ctex"]
+source_file="res://scenes/models/treees/tree2gree_zgniłkizielone.png"
+dest_files=["res://.godot/imported/tree2gree_zgniłkizielone.png-54c3aef29eec89a53bf4b2d9b2ca48d2.s3tc.ctex"]
 
 [params]
 
