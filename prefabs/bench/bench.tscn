@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cpfug48fifri3"]
+[gd_scene format=3 uid="uid://cwo56ckln10sp"]
 
 [ext_resource type="PackedScene" uid="uid://8t4yck40q08a" path="res://scenes/models/benchtxt.glb" id="1_n2juh"]
 [ext_resource type="Material" uid="uid://cua7jjyg8jn8k" path="res://prefabs/bench/bench.tres" id="2_5k8px"]
