@@ -3,20 +3,118 @@
 [ext_resource type="Script" uid="uid://cd4tx8r7btone" path="res://side-scroller/scripts/player/physics_component.gd" id="1_a6l0o"]
 [ext_resource type="Script" uid="uid://feq2ebtn1aoi" path="res://side-scroller/scripts/player/player.gd" id="1_c00o2"]
 [ext_resource type="Script" uid="uid://3yitbq88rspo" path="res://side-scroller/scripts/player/input_component.gd" id="1_ne05e"]
+[ext_resource type="Texture2D" uid="uid://dciwe5qvt16t1" path="res://side-scroller/assets/seed_tileset.png" id="2_cg03c"]
 [ext_resource type="Script" uid="uid://cbf6mtvke3s27" path="res://side-scroller/scripts/player/collision_component.gd" id="4_1vjv6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aid6b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l55ir"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(0, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5popu"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(18, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agxj7"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(36, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sa0lg"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(54, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjlcy"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(72, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sck7r"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(90, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unuwy"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(108, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt615"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(126, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4jbx"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(144, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lmia"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(162, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icgee"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(180, 0, 18, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btb7j"]
+atlas = ExtResource("2_cg03c")
+region = Rect2(198, 0, 18, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aid6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l55ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5popu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agxj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sa0lg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjlcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sck7r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unuwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yt615")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4jbx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lmia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icgee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btb7j")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8aeyx"]
+radius = 4.0
+height = 8.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1548391843]
 script = ExtResource("1_c00o2")
+player_size = Vector2(8, 8)
 
-[node name="PolygonTestingComponent" type="Polygon2D" parent="." unique_id=253148347]
-position = Vector2(0, -10)
-polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1054421069]
+position = Vector2(0, -5)
+sprite_frames = SubResource("SpriteFrames_aid6b")
+autoplay = "default"
+frame_progress = 0.23036832
 
 [node name="Collision" type="CollisionShape2D" parent="." unique_id=1656650258]
-position = Vector2(0, -10)
-shape = SubResource("RectangleShape2D_aid6b")
+position = Vector2(0, -4)
+shape = SubResource("CapsuleShape2D_8aeyx")
 
 [node name="PhysicsComponent" type="Node2D" parent="." unique_id=916389629]
 script = ExtResource("1_a6l0o")
@@ -24,6 +122,5 @@ script = ExtResource("1_a6l0o")
 [node name="InputComponent" type="Node2D" parent="." unique_id=968957729]
 script = ExtResource("1_ne05e")
 
-[node name="CollisionComponent" type="Node2D" parent="." unique_id=658839033 node_paths=PackedStringArray("character_body")]
+[node name="CollisionComponent" type="Node2D" parent="." unique_id=658839033]
 script = ExtResource("4_1vjv6")
-character_body = NodePath("..")
