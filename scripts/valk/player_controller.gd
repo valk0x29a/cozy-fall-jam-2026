@@ -5,8 +5,8 @@ class_name PlayerController
 
 const SENSITIVITY = 0.004
 
-const BOB_FREQ = 2.4
-const BOB_AMP = 0.08
+const BOB_FREQ = 7.2
+const BOB_AMP = 0.01
 var t_bob = 0.0
 
 var last_frame_mouse_pos: Vector3
@@ -62,15 +62,14 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, 0.0, delta * 7.0)
 
 
-	t_bob += delta * velocity.length();# * float(is_on_floor())
-	head.transform.origin = camera_base_offset + _headbob(t_bob)
+	# t_bob += delta * velocity.length();# * float(is_on_floor())
+	# head.transform.origin = camera_base_offset + _headbob(t_bob)
 	
 	move_and_slide()
 
-# func _process(delta: float) -> void:
-# 	t_bob += delta * velocity.length() * float(is_on_floor())
-# 	if camera:
-# 		camera.transform.origin = camera_base_offset + _headbob(t_bob)
+func _process(delta: float) -> void:
+	t_bob += delta * velocity.length()# * float(is_on_floor())
+	head.transform.origin = camera_base_offset + _headbob(t_bob)
 
 func _input(event):
 	if event is InputEventKey:
