@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://0ldvrafxicd5"]
+
+[ext_resource type="PackedScene" uid="uid://bkuoqj0bwsoin" path="res://scenes/models/kraweznik.glb" id="1_x1xuh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16d1p"]
+size = Vector3(0.08074951, 0.10546875, 0.6313019)
+
+[node name="Kraweznik" type="StaticBody3D" unique_id=5434611]
+
+[node name="kraweznik" parent="." unique_id=549145323 instance=ExtResource("1_x1xuh")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.10324535, 0.032414794)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1277983449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00021362305, 0.048828125, -0.0035324097)
+shape = SubResource("BoxShape3D_16d1p")
