@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dowcwtyexhmsc"]
 
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_2ccet"]
 [ext_resource type="PackedScene" uid="uid://hq4eokk4jkfw" path="res://scenes/models/treees/tree2yell.glb" id="1_fobe6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2ccet"]
@@ -7,7 +8,8 @@ size = Vector3(0.24739075, 1.888031, 0.19781494)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8cxtb"]
 
-[node name="Tree2Yell" type="StaticBody3D" unique_id=924923784]
+[node name="Tree2Yell" type="StaticBody3D" unique_id=924923784 groups=["seeds"]]
+script = ExtResource("1_2ccet")
 
 [node name="tree2yell" parent="." unique_id=1892103102 instance=ExtResource("1_fobe6")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.2, 0)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c7r6rsarsn70q"]
 
 [ext_resource type="PackedScene" uid="uid://cu6b8opne7j0n" path="res://scenes/models/treees/tree1.glb" id="1_bv6r6"]
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_x3i0s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8ogsp"]
 size = Vector3(0.22766113, 1.5029907, 0.1965332)
@@ -9,6 +10,7 @@ size = Vector3(0.22766113, 1.5029907, 0.1965332)
 radius = 0.62367237
 
 [node name="Tree1" type="StaticBody3D" unique_id=1113239798]
+script = ExtResource("1_x3i0s")
 
 [node name="tree1" parent="." unique_id=2069334309 instance=ExtResource("1_bv6r6")]
 transform = Transform3D(0.545, 0, 0, 0, 0.545, 0, 0, 0, 0.545, 0, -0.02, 0)
@@ -17,6 +19,6 @@ transform = Transform3D(0.545, 0, 0, 0, 0.545, 0, 0, 0, 0.545, 0, -0.02, 0)
 transform = Transform3D(4.22, 0, 0, 0, 4.22, 0, 0, 0, 4.22, 0, 3.378, -0.004)
 shape = SubResource("BoxShape3D_8ogsp")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1880315440]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1880315440 groups=["seeds"]]
 transform = Transform3D(4.79, 0, 0, 0, 4.79, 0, 0, 0, 4.79, -0.035, 7.712, 0)
 shape = SubResource("SphereShape3D_pqs4v")

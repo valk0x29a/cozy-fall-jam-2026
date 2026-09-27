@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ddwaw744uflu5"]
 
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_341h1"]
 [ext_resource type="PackedScene" uid="uid://bjuacsmj5j4d6" path="res://scenes/models/treees/treeklongree.glb" id="1_g1650"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j6syi"]
@@ -8,7 +9,8 @@ size = Vector3(0.5686035, 4.1043396, 0.5106201)
 [sub_resource type="SphereShape3D" id="SphereShape3D_epkvb"]
 radius = 1.7
 
-[node name="Treeklongree" type="StaticBody3D" unique_id=999611339]
+[node name="Treeklongree" type="StaticBody3D" unique_id=999611339 groups=["seeds"]]
+script = ExtResource("1_341h1")
 
 [node name="treeklongree" parent="." unique_id=1428030403 instance=ExtResource("1_g1650")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)
