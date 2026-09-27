@@ -10,12 +10,12 @@ size = Vector3(0.24739075, 1.888031, 0.19781494)
 [node name="Tree2Org" type="StaticBody3D" unique_id=1516658680]
 
 [node name="tree2org" parent="." unique_id=1185851075 instance=ExtResource("1_4vmhe")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.2, 0)
+transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, 0, -0.18685551, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1689815711]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045463562, 0.94151306, -0.0030822754)
+transform = Transform3D(2.17, 0, 0, 0, 2.17, 0, 0, 0, 2.17, 0.17, 2.387, -0.003)
 shape = SubResource("BoxShape3D_4vmhe")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=619678886]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03995657, 1.377606, -0.0030822754)
+transform = Transform3D(2.27, 0, 0, 0, 2.27, 0, 0, 0, 2.27, -0.04, 4.683, -0.003)
 shape = SubResource("SphereShape3D_s8wmg")

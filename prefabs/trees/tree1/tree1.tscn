@@ -11,12 +11,12 @@ radius = 0.62367237
 [node name="Tree1" type="StaticBody3D" unique_id=1113239798]
 
 [node name="tree1" parent="." unique_id=2069334309 instance=ExtResource("1_bv6r6")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)
+transform = Transform3D(0.545, 0, 0, 0, 0.545, 0, 0, 0, 0.545, 0, -0.02, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1227906623]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1035156e-05, 0.76327515, -0.0040283203)
+transform = Transform3D(4.22, 0, 0, 0, 4.22, 0, 0, 0, 4.22, 0, 3.378, -0.004)
 shape = SubResource("BoxShape3D_8ogsp")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1880315440]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03475094, 1.372274, 0)
+transform = Transform3D(4.79, 0, 0, 0, 4.79, 0, 0, 0, 4.79, -0.035, 7.712, 0)
 shape = SubResource("SphereShape3D_pqs4v")
