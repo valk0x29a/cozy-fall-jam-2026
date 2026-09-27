@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccm58udj2svg2"]
 
-[ext_resource type="PackedScene" uid="uid://wu17bq8628x0" path="res://scenes/models/treees/klon.glb" id="1_f1uww"]
+[ext_resource type="PackedScene" uid="uid://wu17bq8628x0" path="res://scenes/models/treees/klon.glb" id="1_4metn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_16d1p"]
 size = Vector3(0.5686035, 4.1043396, 0.5106201)
@@ -10,7 +10,7 @@ radius = 1.7
 
 [node name="Klon" type="StaticBody3D" unique_id=1954108787]
 
-[node name="klon" parent="." unique_id=2090678829 instance=ExtResource("1_f1uww")]
+[node name="klon" parent="." unique_id=2090678829 instance=ExtResource("1_4metn")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=826539841]
