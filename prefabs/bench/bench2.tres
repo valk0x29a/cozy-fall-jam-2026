@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c5m25w4udnudc"]
+
+[ext_resource type="Shader" uid="uid://cd2ppkg2jyvs3" path="res://shaders/ps1_shader.gdshader" id="1_nuqej"]
+[ext_resource type="Texture2D" uid="uid://cscayumuy50y2" path="res://scenes/models/benchtxt_bench (3).png" id="2_nuqej"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_nuqej")
+shader_parameter/affine_mapping = false
+shader_parameter/albedo = ExtResource("2_nuqej")
+shader_parameter/alpha_scissor = 0.5
+shader_parameter/jitter = 0.0
+shader_parameter/resolution = Vector2i(640, 480)

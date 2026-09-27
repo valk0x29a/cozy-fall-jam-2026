@@ -11,6 +11,9 @@ extends CharacterBody2D
 @onready var collision_component: CollisionComponent = $CollisionComponent
 
 
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func _physics_process(delta: float) -> void:
 	var screen_position: Vector2 = get_viewport_transform() * global_position
 	
@@ -48,10 +51,10 @@ func _physics_process(delta: float) -> void:
 		win()
 
 func die() -> void:
-	print("Player died!")
+	GameManager.lose_seed();
 
 func win() -> void:
-	print("Player won!")
+	GameManager.plant_seed();
 
 func _is_out_of_bounds() -> bool:
 	var half_width: float = player_size.x * 0.5

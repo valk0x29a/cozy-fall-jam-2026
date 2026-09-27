@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dhteunpk4rufc"]
+
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_rqldg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xed3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xed3"]
+
+[node name="TestGather" type="StaticBody3D" unique_id=656713959 groups=["seeds"]]
+script = ExtResource("1_rqldg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1403463782]
+shape = SubResource("BoxShape3D_0xed3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1967121346]
+mesh = SubResource("BoxMesh_0xed3")
