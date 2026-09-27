@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dmbouws3xgrt4"]
+
+[ext_resource type="Script" uid="uid://b26hkje385obn" path="res://scripts/valk/scene_load_on_interact.gd" id="1_yllip"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0xed3"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0xed3"]
+
+[node name="TestInteract" type="StaticBody3D" unique_id=656713959]
+script = ExtResource("1_yllip")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1403463782]
+shape = SubResource("BoxShape3D_0xed3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1967121346]
+mesh = SubResource("BoxMesh_0xed3")

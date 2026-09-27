@@ -19,15 +19,21 @@ var current_sound_time: float
 
 @onready var head = $Head
 @onready var collision_shape = $CollisionShape3D
+@onready var player_interactions = head.get_node("PlayerInteractions")
+@onready var player_hud = $PlayerHud
 
 var movement_is_blocked := false
 var camera_is_blocked := false
+
+@export var load_save_on_ready: bool = true;
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if !head: print("NO CAMERA DETECTED!!!")
 	camera_base_offset = head.transform.origin
 	current_sound_time = footstep_repeat_time
+	if(load_save_on_ready):
+		GameManager.load_save();
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Vector3.ZERO
@@ -70,6 +76,13 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	t_bob += delta * velocity.length()# * float(is_on_floor())
 	head.transform.origin = camera_base_offset + _headbob(t_bob)
+
+	player_hud.turn_off_hover_text();
+	if(player_interactions.is_player_hovering):
+		if(player_interactions.object.has_method("get_ui_text")):
+			if(player_interactions.object.get_ui_text() != ""):
+				player_hud.set_hover_text(player_interactions.object.get_ui_text());
+
 
 func _input(event):
 	if event is InputEventKey:

@@ -233,10 +233,10 @@ directional_shadow_blend_splits = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49403965, 0.6075572, 32.21695)
 
 [node name="benchtxt2" parent="." unique_id=1951929124 instance=ExtResource("2_6nyho")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -1.3063703, 0, 31.766174)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -20.85907, 0, 5.9314423)
 
 [node name="Street Lamp" parent="." unique_id=1471313103 instance=ExtResource("3_nj2sj")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.5282993, 0, 30.776968)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -18.23288, 0, 5.3239155)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1442797316]
 environment = SubResource("Environment_um2rx")

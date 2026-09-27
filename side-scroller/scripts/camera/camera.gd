@@ -21,7 +21,6 @@ func _ready() -> void:
 	if fixed_y_position == 0.0:
 		fixed_y_position = viewport_size.y / 2.0
 
-
 func _physics_process(_delta: float) -> void:
 	if target == null:
 		return
