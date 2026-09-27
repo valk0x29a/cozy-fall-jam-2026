@@ -12,5 +12,5 @@ func player_interact() -> void:
     get_tree().change_scene_to_file("res://scenes/" + scene_name + ".tscn")
 
 func get_ui_text() -> String: 
-    if(require_not_thrown_seed && GameManager.seeds_gathered - GameManager.seeds_thrown <= 0): return "You don't have any seeds to plant!!!";
-    return "Press 'E' to plant your seed!!!";
+    if(require_not_thrown_seed && GameManager.seeds_gathered - GameManager.seeds_thrown <= 0): return "I don't have any seeds to plant!!!";
+    return "Let's plant this seed!!!";

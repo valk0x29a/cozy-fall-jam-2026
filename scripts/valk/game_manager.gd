@@ -13,6 +13,13 @@ var camera_saved_rotation: Vector3 = Vector3.ZERO;
 
 var seeds_used: Array[bool] = [false];
 
+var intro_prompt_said: bool = false;
+
+signal seeds_update
+
+var current_plant_text: int = 0;
+var current_count_text: int = 0;
+
 func load_save():
 	if(first_launch): first_launch = false; return;
 	var player: Node3D = get_node("/root").get_child(1).get_node("Player");
@@ -39,6 +46,7 @@ func create_save():
 
 func acquire_seed() -> void:
 	seeds_gathered += 1;
+	seeds_update.emit();
 
 func throw_seed() -> void:
 	seeds_thrown += 1;

@@ -12,20 +12,34 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_jus5n")
+count_texts = Array[String](["Time to chill out I shall find some seeds, maybe %d", "Time to find some more seeds, like %d", "Let's find %d more seeds"])
+plant_texts = Array[String](["Time to throw the seed at the lookout!!!", "Time to plant this seed at the lookout!!!"])
 
 [node name="Label" type="Label" parent="." unique_id=1640813113]
 layout_mode = 0
-offset_right = 69.0
-offset_bottom = 35.0
+offset_left = 26.0
+offset_top = 23.0
+offset_right = 188.0
+offset_bottom = 58.0
 text = "Time to Gather a Seed!!!"
 
 [node name="Label2" type="Label" parent="." unique_id=1559415168]
 layout_mode = 0
-offset_left = 498.0
-offset_top = 2.0
-offset_right = 660.0
-offset_bottom = 37.0
+offset_left = 471.0
+offset_top = 298.0
+offset_right = 679.0
+offset_bottom = 333.0
 text = "Time to Gather a Seed!!!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="." unique_id=1046381018]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 25.0
+offset_right = 168.0
+offset_bottom = 60.0
+text = "Ehh, Let's find some more seeds, maybe 3"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1495632951]
 layout_mode = 0
@@ -34,3 +48,10 @@ offset_top = 320.0
 offset_right = 580.0
 offset_bottom = 328.0
 texture = ExtResource("2_gbolp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1896547069]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
