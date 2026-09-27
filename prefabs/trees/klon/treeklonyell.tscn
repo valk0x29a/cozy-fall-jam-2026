@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dq8p3usbk5bpt"]
 
 [ext_resource type="PackedScene" uid="uid://b5k8nw0hdamn7" path="res://scenes/models/treees/treeklonyell.glb" id="1_u1uio"]
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_vhqo7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iw4hv"]
 size = Vector3(0.5686035, 4.1043396, 0.5106201)
@@ -8,7 +9,8 @@ size = Vector3(0.5686035, 4.1043396, 0.5106201)
 [sub_resource type="SphereShape3D" id="SphereShape3D_coe5r"]
 radius = 1.7
 
-[node name="Treeklonyell" type="StaticBody3D" unique_id=2103681311]
+[node name="Treeklonyell" type="StaticBody3D" unique_id=2103681311 groups=["seeds"]]
+script = ExtResource("1_vhqo7")
 
 [node name="treeklonyell" parent="." unique_id=1154770645 instance=ExtResource("1_u1uio")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)

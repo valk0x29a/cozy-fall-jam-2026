@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 		object = collision["collider"];
 		is_player_hovering = true;
 	if(Input.is_action_just_pressed("Interact")):
+		if(object == null): return;
 		if(object.has_method("player_interact")):
 			object.player_interact();
 	

@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bygsoy0drt2yg"]
+
+[ext_resource type="Script" uid="uid://clwtjqd2boevu" path="res://scripts/valk/ending_ui.gd" id="1_hhlig"]
+
+[node name="EndingUI" type="Control" unique_id=1984443885]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hhlig")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1520807908]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0.56078434, 0.1254902, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2010745893]
+custom_maximum_size = Vector2(864, 600)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 41.0
+offset_right = 989.0
+offset_bottom = 548.0
+theme_override_font_sizes/font_size = 64
+text = "I have planted 5 seeds, YOUHUUU"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="." unique_id=1731842040]
+custom_maximum_size = Vector2(864, 600)
+layout_mode = 0
+offset_left = 125.0
+offset_top = 346.0
+offset_right = 989.0
+offset_bottom = 853.0
+theme_override_font_sizes/font_size = 64
+text = "Thanks for playing!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

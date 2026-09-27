@@ -25,9 +25,9 @@ text = "Time to Gather a Seed!!!"
 
 [node name="Label2" type="Label" parent="." unique_id=1559415168]
 layout_mode = 0
-offset_left = 471.0
+offset_left = 318.0
 offset_top = 298.0
-offset_right = 679.0
+offset_right = 830.0
 offset_bottom = 333.0
 text = "Time to Gather a Seed!!!"
 horizontal_alignment = 1

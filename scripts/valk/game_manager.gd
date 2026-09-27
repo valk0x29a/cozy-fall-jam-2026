@@ -20,6 +20,27 @@ signal seeds_update
 var current_plant_text: int = 0;
 var current_count_text: int = 0;
 
+var last_throw_failed: bool = false;
+var last_throw_succeded: bool = false;
+
+func is_player_done() -> bool: return seeds_thrown == 5;
+
+func get_prompt_text() -> String:
+	if(!intro_prompt_said): 
+		intro_prompt_said = true; 
+		return "Hmmm, I'm soo tired, let's chill out in this park";
+	if(last_throw_failed):
+		last_throw_failed = false;
+		return "Damn, that was such a beatiful seed...";
+	if(last_throw_succeded):
+		last_throw_succeded = false;
+		return "Hell Yeah, I am as accurate as Meow";
+	return "";
+
+func start_transition_to_black(speed: float, transition_call: Callable) -> void:
+	var player: PlayerController = get_node("/root").get_child(1).get_node("Player");
+	player.player_hud.start_transition_to_black(speed, transition_call);
+
 func load_save():
 	if(first_launch): first_launch = false; return;
 	var player: Node3D = get_node("/root").get_child(1).get_node("Player");
@@ -30,6 +51,7 @@ func load_save():
 	var seeds := get_tree().get_nodes_in_group("seeds");
 	for i in range(seeds.size()):
 		var seed_gather: GatherSeedOnInteract = seeds[i] as GatherSeedOnInteract;
+		if(seed_gather == null): print(seeds[i].name); continue;
 		seed_gather.used = seeds_used[i];
 
 func create_save():
@@ -42,7 +64,8 @@ func create_save():
 	seeds_used.resize(seeds.size());
 	for i in range(seeds.size()):
 		var seed_gather: GatherSeedOnInteract = seeds[i] as GatherSeedOnInteract;
-		seeds_used[i] = seed_gather.used;
+		if(seed_gather == null): print(seeds[i].name); continue;
+		seeds_used[i] = seeds[i].used;
 
 func acquire_seed() -> void:
 	seeds_gathered += 1;
@@ -53,7 +76,9 @@ func throw_seed() -> void:
 
 func plant_seed() -> void:
 	seeds_planted += 1;
-	get_tree().change_scene_to_file("res://scenes/ValkScene.tscn");
+	last_throw_succeded = true;
+	get_tree().change_scene_to_file("res://scenes/main.tscn");
 
 func lose_seed() -> void:
-	get_tree().change_scene_to_file("res://scenes/ValkScene.tscn");
+	last_throw_failed = true;
+	get_tree().change_scene_to_file("res://scenes/main.tscn");

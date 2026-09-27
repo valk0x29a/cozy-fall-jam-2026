@@ -17,12 +17,15 @@ var transition_to_white_speed: float = 1.0;
 var transition_to_white_call: Callable;
 
 func _ready():
+	get_node("Label").text = "";
 	GameManager.seeds_update.connect(update_seeds_text);
 	plant_text_active = false;
-	if(!GameManager.intro_prompt_said):
-		start_prompt("Hmmm, I'm soo tired, let's chill out in this park", 5.0)
-		GameManager.intro_prompt_said = true;
-	start_transition_to_white(2.5, Callable());
+	start_transition_to_white(1.5, check_for_prompt);
+
+func check_for_prompt():
+	var text: String = GameManager.get_prompt_text();
+	if(text == ""): return;
+	start_prompt(text, 5.0);
 
 func _process(delta: float) -> void:
 	if(transition_to_black_active):
@@ -30,12 +33,15 @@ func _process(delta: float) -> void:
 		if(get_node("ColorRect").color.a >= 1.0):
 			if(!transition_to_black_call.is_null()): transition_to_black_call.call();
 			transition_to_black_active = false;
+		return;
 
 	if(transition_to_white_active):
 		get_node("ColorRect").color.a -= (1/transition_to_white_speed) * delta;
 		if(get_node("ColorRect").color.a < 0):
 			if(!transition_to_white_call.is_null()): transition_to_white_call.call();
+			await get_tree().create_timer(0.1).timeout;
 			transition_to_white_active = false;
+		return;
 	
 	if(current_prompt_timer > 0):
 		current_prompt_timer -= delta;
@@ -45,6 +51,8 @@ func _process(delta: float) -> void:
 	elif(!plant_text_active):
 		get_node("Label").text = count_texts[GameManager.current_count_text] % (5 - GameManager.seeds_gathered);
 
+	if(GameManager.is_player_done()):
+		get_node("Label").text = "That's all for now, let's come back to the real world now...";
 	if(GameManager.seeds_gathered - GameManager.seeds_thrown > 0 && !plant_text_active):
 		get_node("Label").text = plant_texts[GameManager.current_plant_text];
 		var random: RandomNumberGenerator = RandomNumberGenerator.new();
@@ -59,13 +67,14 @@ func update_seeds_text():
 	plant_text_active = false;
 
 func set_hover_text(text: String):
+	if(transition_to_black_active || transition_to_white_active): return;
 	get_node("Label2").visible = true;
 	get_node("Label2").text = text;
 
 func turn_off_hover_text():
 	get_node("Label2").visible = false;
 
-func start_prompt(text: String, duration: int):
+func start_prompt(text: String, duration: float):
 	current_prompt_text = text;
 	current_prompt_timer = duration;
 

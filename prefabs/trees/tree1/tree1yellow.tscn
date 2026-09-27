@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8v54lkyl4l7r"]
 
 [ext_resource type="PackedScene" uid="uid://dnv1vlnmgav35" path="res://scenes/models/treees/tree1yellow.glb" id="1_txcnx"]
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_xurns"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_le475"]
 size = Vector3(0.22766113, 1.5029907, 0.1965332)
@@ -8,7 +9,8 @@ size = Vector3(0.22766113, 1.5029907, 0.1965332)
 [sub_resource type="SphereShape3D" id="SphereShape3D_tor4u"]
 radius = 0.62367237
 
-[node name="Tree1Yellow" type="StaticBody3D" unique_id=1968122323]
+[node name="Tree1Yellow" type="StaticBody3D" unique_id=1968122323 groups=["seeds"]]
+script = ExtResource("1_xurns")
 
 [node name="tree1yellow" parent="." unique_id=501026600 instance=ExtResource("1_txcnx")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)

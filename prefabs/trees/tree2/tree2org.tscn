@@ -1,13 +1,15 @@
 [gd_scene format=3 uid="uid://bbuqk8s8uhc46"]
 
 [ext_resource type="PackedScene" uid="uid://bv5nj6qc7cmj8" path="res://scenes/models/treees/tree2org.glb" id="1_4vmhe"]
+[ext_resource type="Script" uid="uid://bstalknng40jm" path="res://scripts/valk/gather_seed_on_interact.gd" id="1_m0itc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vmhe"]
 size = Vector3(0.24739075, 1.888031, 0.19781494)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_s8wmg"]
 
-[node name="Tree2Org" type="StaticBody3D" unique_id=1516658680]
+[node name="Tree2Org" type="StaticBody3D" unique_id=1516658680 groups=["seeds"]]
+script = ExtResource("1_m0itc")
 
 [node name="tree2org" parent="." unique_id=1185851075 instance=ExtResource("1_4vmhe")]
 transform = Transform3D(0.31, 0, 0, 0, 0.31, 0, 0, 0, 0.31, 0, -0.18685551, 0)

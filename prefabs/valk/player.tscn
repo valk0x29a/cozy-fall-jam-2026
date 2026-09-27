@@ -12,7 +12,7 @@ height = 1.5
 [node name="Player" type="CharacterBody3D" unique_id=2987538]
 collision_mask = 3
 script = ExtResource("1_ei4nk")
-move_speed = 2.0
+move_speed = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1252663993]
 shape = SubResource("CapsuleShape3D_16d1p")
