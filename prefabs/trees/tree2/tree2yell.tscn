@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dowcwtyexhmsc"]
+
+[ext_resource type="PackedScene" uid="uid://hq4eokk4jkfw" path="res://scenes/models/treees/tree2yell.glb" id="1_bywn0"]
+
+[node name="Tree2Yell" type="StaticBody3D" unique_id=924923784]
+
+[node name="tree2yell" parent="." unique_id=1892103102 instance=ExtResource("1_bywn0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.2, 0)
