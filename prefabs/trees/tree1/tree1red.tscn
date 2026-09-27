@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dc4cnyg0wrawm"]
+
+[ext_resource type="PackedScene" uid="uid://cqwpuou64mic" path="res://scenes/models/treees/tree1red.glb" id="1_faivi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_prfua"]
+size = Vector3(0.22766113, 1.5029907, 0.1965332)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ssie3"]
+radius = 0.62367237
+
+[node name="Tree1Red" type="StaticBody3D" unique_id=1687439597]
+
+[node name="tree1red" parent="." unique_id=1184632798 instance=ExtResource("1_faivi")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1324289181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1035156e-05, 0.76327515, -0.0040283203)
+shape = SubResource("BoxShape3D_prfua")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1340625147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03475094, 1.372274, 0)
+shape = SubResource("SphereShape3D_ssie3")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://3m6mvx0n71cw"]
+
+[ext_resource type="PackedScene" uid="uid://d0u1xa3hxbuvw" path="res://scenes/models/treees/tree2gree.glb" id="1_kxrka"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16d1p"]
+size = Vector3(0.24739075, 1.888031, 0.19781494)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_oy8pt"]
+
+[node name="Tree2Gree" type="StaticBody3D" unique_id=894629679]
+
+[node name="tree2gree" parent="." unique_id=1642923213 instance=ExtResource("1_kxrka")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.2, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=258503859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045463562, 0.94151306, -0.0030822754)
+shape = SubResource("BoxShape3D_16d1p")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=127482050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03995657, 1.377606, -0.0030822754)
+shape = SubResource("SphereShape3D_oy8pt")

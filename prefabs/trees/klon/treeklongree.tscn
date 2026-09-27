@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ddwaw744uflu5"]
+
+[ext_resource type="PackedScene" uid="uid://bjuacsmj5j4d6" path="res://scenes/models/treees/treeklongree.glb" id="1_g1650"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6syi"]
+size = Vector3(0.5686035, 4.1043396, 0.5106201)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_epkvb"]
+radius = 1.7
+
+[node name="Treeklongree" type="StaticBody3D" unique_id=999611339]
+
+[node name="treeklongree" parent="." unique_id=1428030403 instance=ExtResource("1_g1650")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.02, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1876704942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06213379, 2.0706635, -0.24468994)
+shape = SubResource("BoxShape3D_j6syi")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=310299110]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.825816, -0.18961096)
+shape = SubResource("SphereShape3D_epkvb")
