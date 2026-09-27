@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bpwgdd3rdm28y" path="res://side-scroller/assets/waterfall_tileset.png" id="9_pi2bd"]
 [ext_resource type="Texture2D" uid="uid://d02m2fa6rg1s5" path="res://side-scroller/assets/gust_tileset.png" id="10_w53ca"]
 [ext_resource type="Script" uid="uid://c6uq56c3w8l6d" path="res://side-scroller/scripts/camera/camera.gd" id="11_ik282"]
+[ext_resource type="AudioStream" uid="uid://h1ri03t6hofe" path="res://side-scroller/assets/music/shidenbeatsmusic-birds39-forest-20772.mp3" id="12_07sa3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8wov"]
 texture = ExtResource("1_b1wlu")
@@ -688,3 +689,9 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 script = ExtResource("11_ik282")
 target = NodePath("../Player")
+
+[node name="ShidenbeatsmusicBirds39Forest20772" type="AudioStreamPlayer2D" parent="." unique_id=1293543578]
+position = Vector2(39, 406)
+stream = ExtResource("12_07sa3")
+volume_db = -10.0
+autoplay = true
